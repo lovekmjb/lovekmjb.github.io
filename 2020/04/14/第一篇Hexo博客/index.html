@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>我的第一篇博客 | 谢同学的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="XieSenshi">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'lx',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>2020-04-14</span>
+    <h2>我的第一篇博客</h2>
+    <div class="tags"><i class="fa fa-tag"></i><a class="tag-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a></div>
+    </div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <h2 id="1-为什么想搭建博客"><a href="#1-为什么想搭建博客" class="headerlink" title="1.为什么想搭建博客"></a><strong>1.为什么想搭建博客</strong></h2><p>&emsp;&emsp;最初是在油管上学习如何建立V2ray服务器，找到了一个用博客伪装V2ray服务器的教程视频。在认真学习了视频的内容后，我便兴匆匆的去租了一个美国VPS的服务器。在经过一系列的操作后，V2ray服务器成功搭建。然而这个服务器根本不能用，太慢了，延迟上一天，果然便宜没好货，跟隔着太平洋买了个垃圾差不多（穷是原罪T_T)。于是我对V2ray服务器的兴趣被磨得一干二净，却对博客起了兴趣。</p>
+<a id="more"></a>
+
+<h2 id="2-第一次搭建博客"><a href="#2-第一次搭建博客" class="headerlink" title="2.第一次搭建博客"></a><strong>2.第一次搭建博客</strong></h2><p>&emsp;&emsp;于有之前购买垃圾服务器的经历，我便不打算购买服务  器搭建博客，而是使用了GitHub。我先是在油管上找了很多有关搭建博客的视频，在对这些视频认真学习之后。我开始了博客搭建。鉴于教程视频中是在Mc环境下进行搭建的，于是我打算在电脑上安装Linux虚拟机，并使用Hugo来搭建。在下载安装了Git和Hugo之后终于#hugo server，在本地成功建立博客。似乎快要成功了，然 而在部署到GitHub的时候出现了问题。不知道是什么原因虚拟机下的Deepin无法连接到GitHub，在上网查询很久依然无法解决，毕竟像我这样在虚拟机里搭建博客的是少数。这第一次搭建博客算是失败了。</p>
+<h2 id="3-三次搭建博客"><a href="#3-三次搭建博客" class="headerlink" title="3.三次搭建博客"></a><strong>3.三次搭建博客</strong></h2><p>&emsp;&emsp;这次我推翻了上次用虚拟机搭建的方式，因为有人给我推荐了阿里云的试用服务器。这次我打算直接将博客搭建在阿里云服务器里。我先是在<a href="https://my.freenom.com/" target="_blank" rel="noopener">Freenom</a>申请了一个免费域名。然后注册了阿里云的账号并完成实名认证获得了一台服务器。然后我安装了Finalshell成功连接上服务器，并在服务器里安装了宝塔面板。域名解析好后，将域名与网站绑定。但当我打开那个网址时显示网址需要备案。于是我便去备案，结果有我申请的是.tk(不要钱)的域名,不支持备案我晕(((φ(◎ロ◎;)φ)))，所以贫穷是原罪。自然这次也失败了。</p>
+<h2 id="4-第三次搭建博客"><a href="#4-第三次搭建博客" class="headerlink" title="4.第三次搭建博客"></a><strong>4.第三次搭建博客</strong></h2><p>&emsp;&emsp;在吸取前两次失败的教训，我决定推倒重来。将Linux换成Windos，把Hugo换成Hexo，继续使用Github。这次有了前两次的经验，在看了晚上的教程后还是比较顺利的。然而在生成SSH密钥时出现了问题，密钥无法生成。于是我又上油管上搜索如何在Git上生成SSH密钥的视频，这次我按照视频中的方法成功生成了密钥，并成功连接上了Github。然而在部署到GitHub上时，遇到了问题，一直显示_config文件中deployer的设置不正确。于是我上网查找了很多关于这个问题的解决方法，试了不知多少次依然无法部署。于是我决定，重新生成一个博客，原模原样试了一遍，依然不行。功夫不负有心人，就在我在GitHub的仓库里乱翻的时候，发现了在仓库里也需要上传SSH公钥。于是我抱着试一试的心态往里面上传了SSH公钥，并重新部署了一次，居然成功了。我太激动了，声音都颤抖了q(≧▽≦q)！！！<br>第三次搭建博客成功ψ(｀∇´)ψ！！！<br>&emsp;&emsp;之后我写下了这篇博客，用来纪念这次搭建博客的经历。</p>
+<br>
+
+<p><img src="https://s1.ax1x.com/2020/05/04/Y9cSUS.jpg" alt="博客搭建"></p>
+<br>
+
+<h2 id="5-小结"><a href="#5-小结" class="headerlink" title="5.小结"></a><strong>5.小结</strong></h2><p>&emsp;&emsp;这第一篇博客耗时四天，踩了无数的坑，当然也收获了很多,感觉自己能有一个能与别人分享自己想法的博客特别的开心O(∩_∩)O。虽然有点累,但是生命在于折腾!第一次写博客，内容比较简陋，望谅解。当然以后会进步的q(≧▽≦q)！</p>
+<br>
+
+<p>   以下是这次搭建博客所用到的教程资料和视频：<br>   <a href="https://www.jianshu.com/p/f3e1662ca34f" target="_blank" rel="noopener">Hexo&amp;Github Blog 搭建</a><br>   <a href="https://blog.csdn.net/weixin_43571920/article/details/104413636" target="_blank" rel="noopener">FATAL E:\blog not empty, please run <code>hexo init</code> on an empty folder and then copy your files into it解决方法</a><br>   <a href="https://www.jianshu.com/p/ef3f221a0374" target="_blank" rel="noopener">Win10+Hexo+GitHub搭建个人博客详解</a><br>   <a href="https://www.jianshu.com/p/390f202c5b0e" target="_blank" rel="noopener">5分钟搞定个人博客-hexo</a><br>   <a href="https://blog.csdn.net/renlzrz/article/details/83545521" target="_blank" rel="noopener">md 文件的编辑</a><br>   <a href="https://www.youtube.com/watch?v=yVgyAHBIyOQ" target="_blank" rel="noopener">如何用SSH密钥连接到Git仓库和远程服务器</a><br>   <a href="https://www.youtube.com/watch?v=J7XQ2FeTHLg&t=1163s" target="_blank" rel="noopener">手把手教你从0开始搭建自己的个人博客 |第二种姿势 | hugo</a><br><a href="https://www.youtube.com/watch?v=erKYtw4Rfhk&t=788s" target="_blank" rel="noopener">手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo</a><br><a href="https://www.youtube.com/watch?v=tk22q_jtYPg&t=407s" target="_blank" rel="noopener">波仔分享</a><br>… …</p>
+<p>十分感谢他们的分享！                                                                                                               </p>
+<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;2020.5.4
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/2020/05/04/%E5%8D%95%E7%89%87%E6%9C%BA/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>鬼火少年</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="#">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>没有更早的文章</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2019.<a href="/">谢同学的博客</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="XieSenshi"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>XieSenshi</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>首页</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>页面</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>友链</span>
+        <ul>
+          <li> <a href="https://lx.js.org" target="_blank">Theme-Lx</a></li>
+        </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>鬼火少年 | 谢同学的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="XieSenshi">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'lx',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>2020-05-04</span>
+    <h2>鬼火少年</h2>
+    <div class="tags"><i class="fa fa-tag"></i><a class="tag-link" href="/tags/C51/" rel="tag">C51</a></div>
+    </div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <p><img src="https://s1.ax1x.com/2020/05/04/Y9jx4e.jpg" alt="单片机"></p>
+<a id="more"></a>
+
+<h1 id="初学单片机"><a href="#初学单片机" class="headerlink" title="初学单片机"></a>初学单片机</h1><ul>
+<li><strong>刚开始学单片机，是个单片机小白，如果有哪里不对的请大家多多指教谢谢！</strong></li>
+</ul>
+<h2 id="emsp-爆闪灯："><a href="#emsp-爆闪灯：" class="headerlink" title="&emsp;爆闪灯："></a>&emsp;<strong>爆闪灯：</strong></h2><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">ORG</span> <span class="number">0000</span>H</span><br><span class="line">  AJMP MAIN</span><br><span class="line">  ORG <span class="number">000</span>BH</span><br><span class="line">  AJMP TIMER0</span><br><span class="line"><span class="symbol">MAIN</span>:</span><br><span class="line">  CLR <span class="built_in">F0</span>   //设置状态标志</span><br><span class="line">  <span class="keyword">MOV </span><span class="number">30</span>H,<span class="number">#5</span>H  //每个状态次</span><br><span class="line">  <span class="keyword">MOV </span>TH0,<span class="number">#3</span>CH   //初始化中断定时器设置<span class="number">50</span>ms</span><br><span class="line">  <span class="keyword">MOV </span>TL0,<span class="number">#0B0</span>H</span><br><span class="line">  <span class="keyword">MOV </span>IE,<span class="number">#82</span>H</span><br><span class="line">  SETB TR0</span><br><span class="line">  SJMP $</span><br><span class="line"><span class="symbol">  TIMER0:</span></span><br><span class="line">  <span class="keyword">MOV </span>TH0,<span class="number">#3</span>CH</span><br><span class="line">  <span class="keyword">MOV </span>TL0,<span class="number">#0B0</span>H</span><br><span class="line">  DJNZ <span class="number">30</span>H,T001   //判断循环次数</span><br><span class="line">  CPL <span class="built_in">F0</span>        </span><br><span class="line">  <span class="keyword">MOV </span><span class="number">30</span>H,<span class="number">#5</span>H</span><br><span class="line"><span class="symbol">T001</span>:</span><br><span class="line">  JB <span class="built_in">F0</span>,T002  //判断状态</span><br><span class="line">  CPL <span class="built_in">P1</span>.<span class="number">0</span></span><br><span class="line">  CLR <span class="built_in">P1</span>.<span class="number">1</span></span><br><span class="line">  CPL <span class="built_in">P1</span>.<span class="number">2</span></span><br><span class="line">  CLR <span class="built_in">P1</span>.<span class="number">3</span></span><br><span class="line">  SJMP T0_EX</span><br><span class="line"><span class="symbol">T002</span>: CLR <span class="built_in">P1</span>.<span class="number">0</span></span><br><span class="line">      CPL <span class="built_in">P1</span>.<span class="number">1</span></span><br><span class="line">          CLR <span class="built_in">P1</span>.<span class="number">2</span></span><br><span class="line">          CPL <span class="built_in">P1</span>.<span class="number">3</span></span><br><span class="line"><span class="symbol">T0_EX</span>: RETI</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s1.ax1x.com/2020/05/04/YC8g7q.gif" alt=" 爆闪灯"></p>
+<br>
+
+<h2 id="emsp-流水灯"><a href="#emsp-流水灯" class="headerlink" title="&emsp;流水灯"></a>&emsp;<strong>流水灯</strong></h2><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">        ORG <span class="number">000</span>H</span><br><span class="line">    <span class="keyword">MOV </span><span class="built_in">R0</span>,<span class="number">#0</span>AH   </span><br><span class="line">    <span class="keyword">MOV </span>A,<span class="number">#0</span>FEH </span><br><span class="line">    <span class="keyword">MOV </span><span class="built_in">P1</span>,A</span><br><span class="line">    AJMP MAIN</span><br><span class="line">    ORG <span class="number">000</span>BH</span><br><span class="line">    AJMP TIMERO</span><br><span class="line"><span class="symbol">MAIN</span>: </span><br><span class="line">    <span class="keyword">MOV </span>TMOD,<span class="number">#10</span>H</span><br><span class="line">    <span class="keyword">MOV </span>TL0,<span class="number">#0B0</span>H</span><br><span class="line">    <span class="keyword">MOV </span>TH0,<span class="number">#3</span>CH</span><br><span class="line">	<span class="keyword">MOV </span><span class="built_in">R0</span>,<span class="number">#0</span>AH   </span><br><span class="line">    <span class="keyword">MOV </span>IE,<span class="number">#82</span>H</span><br><span class="line">    SETB TR0</span><br><span class="line">    SJMP $</span><br><span class="line"><span class="symbol">TIMERO</span>: </span><br><span class="line">    <span class="keyword">MOV </span>TL0,<span class="number">#0B0</span>H</span><br><span class="line">    <span class="keyword">MOV </span>TH0,<span class="number">#3</span>CH</span><br><span class="line">    DJNZ <span class="built_in">R0</span>,T0_EX</span><br><span class="line">    RL A</span><br><span class="line">    <span class="keyword">MOV </span><span class="built_in">P1</span>,A</span><br><span class="line">    <span class="keyword">MOV </span><span class="built_in">R0</span>,<span class="number">#0</span>AH</span><br><span class="line"><span class="symbol"> T0_EX:</span>RETI</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s1.ax1x.com/2020/05/04/YCgPN8.gif" alt="流水灯"></p>
+<br>
+
+<h2 id="emsp-最后放一个老师写的流水灯（我稍微改了下参数）"><a href="#emsp-最后放一个老师写的流水灯（我稍微改了下参数）" class="headerlink" title="&emsp;最后放一个老师写的流水灯（我稍微改了下参数）"></a>&emsp;<strong>最后放一个老师写的流水灯（我稍微改了下参数）</strong></h2><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">ORG</span> <span class="number">0000</span>H</span><br><span class="line">  AJMP MAIN</span><br><span class="line">  ORG <span class="number">000</span>BH</span><br><span class="line">  AJMP TIMER0</span><br><span class="line"><span class="symbol">MAIN</span>:</span><br><span class="line">  <span class="keyword">MOV </span><span class="built_in">P1</span>,<span class="number">#0</span>FEH</span><br><span class="line">  CLR <span class="built_in">F0</span>  </span><br><span class="line">  <span class="keyword">MOV </span><span class="number">30</span>H,<span class="number">#10</span>H  //这里的原值是<span class="number">10</span>H</span><br><span class="line">  <span class="keyword">MOV </span><span class="number">31</span>H,<span class="number">#0</span>FDH  //这里的原值是<span class="number">0</span>FEH</span><br><span class="line">  <span class="keyword">MOV </span><span class="number">32</span>H,<span class="number">#10</span>H </span><br><span class="line">  <span class="keyword">MOV </span>TMOD,<span class="number">#01</span>H</span><br><span class="line">  <span class="keyword">MOV </span>TH0,<span class="number">#3</span>CH</span><br><span class="line">  <span class="keyword">MOV </span>TL0,<span class="number">#0B0</span>H</span><br><span class="line">  <span class="keyword">MOV </span>IE,<span class="number">#82</span>H</span><br><span class="line">  SETB TR0</span><br><span class="line">  SJMP $</span><br><span class="line"><span class="symbol">TIMER0</span>:</span><br><span class="line">  <span class="keyword">MOV </span>TH0,<span class="number">#3</span>CH</span><br><span class="line">  <span class="keyword">MOV </span>TL0,<span class="number">#0B0</span>H</span><br><span class="line">  DJNZ <span class="number">32</span>H,T0_EX</span><br><span class="line">  <span class="keyword">MOV </span><span class="number">32</span>H,<span class="number">#10</span>H</span><br><span class="line">  DJNZ <span class="number">30</span>H,T001</span><br><span class="line">  CPL <span class="built_in">F0</span></span><br><span class="line">  <span class="keyword">MOV </span><span class="number">30</span>H,<span class="number">#15</span>  //这里的原值是<span class="number">10</span>H</span><br><span class="line"><span class="symbol">T001</span>: <span class="keyword">MOV </span>A,<span class="number">31</span>H</span><br><span class="line">  JB <span class="built_in">F0</span>,T002</span><br><span class="line">  RL A</span><br><span class="line">  SJMP T003</span><br><span class="line"><span class="symbol">T002</span>: RR A</span><br><span class="line"><span class="symbol">T003</span>: <span class="keyword">MOV </span><span class="number">31</span>H,A </span><br><span class="line">  <span class="keyword">MOV </span><span class="built_in">P1</span>,A </span><br><span class="line"><span class="symbol">T0_EX</span>: RETI</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>这两个参数改动后便可流畅亮灯。</strong></li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/05/04/YCgPN8.gif" alt="流水灯"></p>
+<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;2020.5.4
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/2020/05/04/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>Hexo博客搭...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/2020/04/14/%E7%AC%AC%E4%B8%80%E7%AF%87Hexo%E5%8D%9A%E5%AE%A2/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>我的第一篇博客</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2019.<a href="/">谢同学的博客</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="XieSenshi"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>XieSenshi</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>首页</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>页面</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>友链</span>
+        <ul>
+          <li> <a href="https://lx.js.org" target="_blank">Theme-Lx</a></li>
+        </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>
